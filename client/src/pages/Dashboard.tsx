@@ -8,6 +8,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Lock, Play, Pause, Settings, ChevronRight, CheckCircle2, AlertTriangle } from "lucide-react";
 import Layout from "@/components/Layout";
+import MoodCheck from "@/components/MoodCheck";
 import { toast } from "sonner";
 
 const C = {
@@ -232,6 +233,8 @@ export default function Dashboard() {
 
           {/* Right column */}
           <div className="space-y-6">
+            {/* Daily Mood Check */}
+            <MoodCheck />
             {/* Time limit */}
             <div className="rounded-2xl p-6" style={{ background: C.surf, border: `1px solid ${C.bdr}` }}>
               <div className="flex items-center gap-2 mb-4">
